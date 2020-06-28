@@ -1,0 +1,25 @@
+<link href="../../styles/Diagram/style/diagram-common.css" rel="stylesheet">
+<script src="script/diagram-common.ts"></script>
+<style>
+    .e-symbolpalette {
+        display: block;
+    }
+</style>
+<div class="control-section">
+    <div style="width: 100%">
+        <div class="sb-mobile-palette-bar">
+            <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
+        </div>
+        <div id="palette-space" >
+            <ejs-symbolpalette id="symbolpalette"  [palettes]='palettes' width="100%" height="300px" [symbolHeight]=60 [symbolWidth]=60 [symbolMargin]='symbolMargin' [getSymbolInfo]='getSymbolInfo' [getNodeDefaults]='getSymbolDefaults'>
+            </ejs-symbolpalette>
+        </div>
+        <div id="diagram-space" class="">
+            <div class="content-wrapper">
+                <ejs-diagram #diagram id="diagram" width="100%" height="700px" [snapSettings]='snapSettings' [getConnectorDefaults]='connDefaults' [getNodeDefaults]='nodeDefaults' dragEnter='dragEnter' (created)="diagramCreate($event)">
+                    
+                </ejs-diagram>
+            </div>
+        </div>
+    </div>
+</div>
